@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -70,7 +86,7 @@
               <div class="col-md-12">
                 <div class="position-relative form-group">
                   <label class="font-weight-bold">
-                    <xsl:text>Carnet de formules &#xE0; utiliser</xsl:text>
+                    <xsl:text>Carnet de formules à utiliser</xsl:text>
                   </label>
                   <p>
                     <xsl:value-of select="bank_note_book/name_with_current_note"/>
@@ -81,7 +97,7 @@
               <div class="col-md-4">
                 <div class="position-relative form-group">
                   <label for="date">
-                    <xsl:text>Date d'&#xE9;dition</xsl:text>
+                    <xsl:text>Date d'édition</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
                   <div class="input-group">
@@ -96,7 +112,7 @@
                 <div class="col-md-4">
                   <div class="position-relative form-group">
                     <label for="echeance_date">
-                      <xsl:text>Date d'&#xE9;ch&#xE9;ance</xsl:text>
+                      <xsl:text>Date d'échéance</xsl:text>
                       <span style="color: red"> *</span>
                     </label>
                     <div class="input-group">
@@ -111,21 +127,21 @@
               <div class="col-md-12">
                 <div class="card-header">
                   <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    <xsl:text>Ordres de paiement &#xE0; ex&#xE9;cuter</xsl:text>
+                    <xsl:text>Ordres de paiement à exécuter</xsl:text>
                   </div>
                 </div>
                 <div class="table-responsive">
                   <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
                     <thead>
                       <tr>
-                        <th class="text-center">N&#xB0;</th>
+                        <th class="text-center">N°</th>
                         <th class="text-center">Date</th>
-                        <th class="text-center">R&#xE9;f&#xE9;rence</th>
+                        <th class="text-center">Référence</th>
                         <xsl:if test="is_hetero">
-                          <th class="text-center">B&#xE9;n&#xE9;ficiaire</th>
+                          <th class="text-center">Bénéficiaire</th>
                         </xsl:if>
-                        <th class="text-center">Doc de r&#xE9;f&#xE9;rence</th>
-                        <th class="text-center">Montant &#xE0; payer</th>
+                        <th class="text-center">Doc de référence</th>
+                        <th class="text-center">Montant à payer</th>
                       </tr>
                     </thead>
                     <tbody>

@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sec="http://www.surati.io/Security/User/Profile" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -39,7 +55,7 @@
     <div class="main-card mb-3 card card-body" app="app" ng-controller="AppCtrl as vm">
       <div class="card-header">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-          <xsl:text>Liste des paiements &#xE0; exporter</xsl:text>
+          <xsl:text>Liste des paiements à exporter</xsl:text>
         </div>
         <xsl:if test="sec:hasAccess(.,'EXECUTER_ORDRES_PAIEMENT')">
           <div class="btn-actions-pane-right">
@@ -57,13 +73,13 @@
       <div class="card-body">
         <div class="row" ng-if="vm.loadingData">
           <div class="col-sm-12 text-center">
-            <h4 class="text-muted">Chargement des donn&#xE9;es... <small>Veuillez patienter</small></h4>
+            <h4 class="text-muted">Chargement des données... <small>Veuillez patienter</small></h4>
             <img src="/io/surati/gap/web/base/img/loader.gif" width="250"/>
           </div>
         </div>
         <div ng-if="!vm.loadingData">
           <h6 class="text-center pb-1 pt-5" ng-if="vm.items.length == 0">
-            <xsl:text>Il n'y a aucun paiement &#xE0; exporter.</xsl:text>
+            <xsl:text>Il n'y a aucun paiement à exporter.</xsl:text>
           </h6>
           <div class="row" ng-if="vm.items.length &gt; 0">
             <div class="col-sm-12 col-md-12">
@@ -71,10 +87,10 @@
                 <table class="table table-hover table-striped table-bordered table-sm dataTable dtr-inline">
                   <thead>
                     <tr>
-                      <th>N&#xB0;</th>
+                      <th>N°</th>
                       <th>Date</th>
-                      <th>R&#xE9;f&#xE9;rence</th>
-                      <th>B&#xE9;n&#xE9;ficiaire</th>
+                      <th>Référence</th>
+                      <th>Bénéficiaire</th>
                       <th>Montant</th>
                       <th>Formule</th>
                       <th>Statut</th>

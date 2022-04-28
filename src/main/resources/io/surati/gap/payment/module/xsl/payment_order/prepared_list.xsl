@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sec="http://www.surati.io/Security/User/Profile" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -40,35 +56,35 @@
     <div class="main-card mb-3 card card-body" app="app" ng-controller="AppCtrl as vm" style="position:relative">
       <div id="toolbar" class="card fixed-top d-flex align-items-center" style="top: 60px;visibility:hidden;">
         <div class="card-header">
-          <div ng-if="vm.amountSelected() &gt; 0" class="badge badge-pill badge-success mr-2">Montant s&#xE9;lectionn&#xE9; : {{vm.amountSelected() | number}} FCFA</div>
-          <div ng-if="!(vm.amountSelected() &gt;= 0)" class="badge badge-pill badge-danger mr-2">Montant s&#xE9;lectionn&#xE9; : {{vm.amountSelected() | number}} FCFA</div>
+          <div ng-if="vm.amountSelected() &gt; 0" class="badge badge-pill badge-success mr-2">Montant sélectionné : {{vm.amountSelected() | number}} FCFA</div>
+          <div ng-if="!(vm.amountSelected() &gt;= 0)" class="badge badge-pill badge-danger mr-2">Montant sélectionné : {{vm.amountSelected() | number}} FCFA</div>
           <div role="group" class="btn-group btn-group btn-group-toggle mr-1">
             <button type="button" class="btn btn-alternate" ng-click="vm.mergeInNewGroup()" ng-disabled="vm.loadingMerge"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingMerge"/> Grouper
 	             </button>
-            <button type="button" class="btn btn-primary" ng-click="vm.openOtherBeneficiaryDialog()">Grouper avec un tiers diff&#xE9;rent</button>
+            <button type="button" class="btn btn-primary" ng-click="vm.openOtherBeneficiaryDialog()">Grouper avec un tiers différent</button>
           </div>
         </div>
       </div>
       <div ng-if="vm.loadingData">
         <div class="col-sm-12 text-center">
-          <h4 class="text-muted">Chargement des donn&#xE9;es... <small>Veuillez patienter</small></h4>
+          <h4 class="text-muted">Chargement des données... <small>Veuillez patienter</small></h4>
           <img src="/io/surati/gap/web/base/img/loader.gif" width="250"/>
         </div>
       </div>
       <div ng-if="!vm.loadingData">
         <div class="card-header">
           <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-            <xsl:text>Ordres de paiement &#xE0; pr&#xE9;parer</xsl:text>
+            <xsl:text>Ordres de paiement à préparer</xsl:text>
           </div>
           <div class="btn-actions-pane-right">
             <div class="row">
-              <div ng-if="vm.amountSelected() &gt; 0" class="badge badge-pill badge-success text-center my-auto mr-2">Montant s&#xE9;lectionn&#xE9; : {{vm.amountSelected() | number}} FCFA</div>
-              <div ng-if="!(vm.amountSelected() &gt;= 0)" class="badge badge-pill badge-danger text-center my-auto mr-2">Montant s&#xE9;lectionn&#xE9; : {{vm.amountSelected() | number }} FCFA</div>
+              <div ng-if="vm.amountSelected() &gt; 0" class="badge badge-pill badge-success text-center my-auto mr-2">Montant sélectionné : {{vm.amountSelected() | number}} FCFA</div>
+              <div ng-if="!(vm.amountSelected() &gt;= 0)" class="badge badge-pill badge-danger text-center my-auto mr-2">Montant sélectionné : {{vm.amountSelected() | number }} FCFA</div>
               <xsl:if test="sec:hasAccess(.,'PREPARER_ORDRES_PAIEMENT')">
                 <div role="group" class="btn-group btn-group btn-group-toggle mr-1">
                   <button type="button" class="btn btn-alternate" ng-click="vm.mergeInNewGroup()" ng-disabled="vm.loadingMerge"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingMerge"/> Grouper
 		             </button>
-                  <button type="button" class="btn btn-primary" ng-click="vm.openOtherBeneficiaryDialog()">Grouper avec un tiers diff&#xE9;rent</button>
+                  <button type="button" class="btn btn-primary" ng-click="vm.openOtherBeneficiaryDialog()">Grouper avec un tiers différent</button>
                 </div>
                 <a href="/payment-order/edit?{root_page/full}" class="btn-icon btn-wide btn-outline-2x btn btn-outline-focus btn-sm d-flex mr-1">
                   <xsl:text>Nouveau</xsl:text>
@@ -90,7 +106,7 @@
           </div>
         </div>
         <h6 class="text-center pb-1 pt-1" ng-if="vm.groups.length == 0">
-          <xsl:text>Il n'y a aucun ordre de paiement &#xE0; pr&#xE9;parer.</xsl:text>
+          <xsl:text>Il n'y a aucun ordre de paiement à préparer.</xsl:text>
         </h6>
         <div class="col-sm-12 col-md-12 mt-4" ng-repeat="group in vm.groups">
           <div id="{{{{group.id}}}}" class="main-card mb-3 card">
@@ -107,11 +123,11 @@
                       <div role="group" class="btn-group btn-group btn-group-toggle mr-1">
                         <button type="button" class="btn btn-alternate" ng-click="$parent.vm.mergeSelectedOrders(group)" ng-disabled="group.loading"><i class="fa fa-spinner fa-spin" ng-if="group.loading"/> Ajouter au groupe
 		             </button>
-                        <button type="button" class="btn btn-dark" ng-click="vm.openOtherBeneficiaryDialog(group)" ng-disabled="group.loading"><i class="fa fa-spinner fa-spin" ng-if="group.loading"/> Changer b&#xE9;n&#xE9;ficiaire
+                        <button type="button" class="btn btn-dark" ng-click="vm.openOtherBeneficiaryDialog(group)" ng-disabled="group.loading"><i class="fa fa-spinner fa-spin" ng-if="group.loading"/> Changer bénéficiaire
 		             </button>
                       </div>
                       <a class="btn-icon btn-wide btn-outline-2x btn btn-outline-focus btn-sm d-flex mr-1" ng-click="$parent.vm.openAccountDialog(group)">
-		              Choisir mode de r&#xE8;glement
+		              Choisir mode de règlement
 		          </a>
                       <button type="button" class="btn-icon btn-wide btn-outline-2x btn btn-success btn-sm d-flex mr-3" ng-click="vm.validateSingle(group)" ng-disabled="group.loadingValidate"><i class="fa fa-spinner fa-spin" ng-if="group.loadingValidate"/> Valider
 		          </button>
@@ -127,13 +143,13 @@
                     <th>
                       <input type="checkbox" ng-model="group.selectAll" ng-change="vm.selectAllChanged(group.orders, group.selectAll)"/>
                     </th>
-                    <th class="text-center">N&#xB0;</th>
+                    <th class="text-center">N°</th>
                     <th class="text-center">Date</th>
-                    <th class="text-center">R&#xE9;f&#xE9;rence</th>
-                    <th class="text-center" ng-if="group.is_hetero">B&#xE9;n&#xE9;ficiaire</th>
-                    <th class="text-center">Document de r&#xE9;f&#xE9;rence</th>
+                    <th class="text-center">Référence</th>
+                    <th class="text-center" ng-if="group.is_hetero">Bénéficiaire</th>
+                    <th class="text-center">Document de référence</th>
                     <th class="text-center">Date du document</th>
-                    <th class="text-center">Montant &#xE0; payer</th>
+                    <th class="text-center">Montant à payer</th>
                     <th class="text-center">Actions</th>
                   </tr>
                 </thead>
@@ -191,8 +207,8 @@
               <div ng-if="!(group.total_amount &gt; 0)" class="badge badge-pill badge-danger">Total : {{group.total_amount_in_human}}</div>
               <div class="badge badge-pill badge-warning" ng-if="group.mean_type_id == 'NONE'">Aucun mode de paiement choisi</div>
               <div class="badge badge-pill badge-success" ng-if="!(group.mean_type_id == 'NONE')">{{group.mean_type}}</div>
-              <div class="badge badge-pill badge-warning" ng-if="group.due_date == '' &amp;&amp; group.mean_type_id == 'LETTRE_DE_CHANGE' ">Aucune &#xE9;ch&#xE9;ance choisie</div>
-              <div class="badge badge-pill badge-success" ng-if="!(group.due_date == '') &amp;&amp; group.mean_type_id == 'LETTRE_DE_CHANGE' ">Date d'&#xE9;ch&#xE9;ance: {{group.due_date_view}}</div>
+              <div class="badge badge-pill badge-warning" ng-if="group.due_date == '' &amp;&amp; group.mean_type_id == 'LETTRE_DE_CHANGE' ">Aucune échéance choisie</div>
+              <div class="badge badge-pill badge-success" ng-if="!(group.due_date == '') &amp;&amp; group.mean_type_id == 'LETTRE_DE_CHANGE' ">Date d'échéance: {{group.due_date_view}}</div>
             </div>
           </div>
         </div>
@@ -204,7 +220,7 @@
     </div>
     <script type="text/ng-template" id="accountListDialog.html">
       <div class="modal-header">
-        <h4 class="modal-title">Choisir mode de r&#xE8;glement</h4>
+        <h4 class="modal-title">Choisir mode de règlement</h4>
       </div>
       <div class="modal-body">
         <div class="col-md-12">
@@ -230,7 +246,7 @@
         <div class="col-md-12" ng-if="vm.data.mean_type_id == 'LETTRE_DE_CHANGE'">
           <div class="position-relative form-group">
             <label for="due_date">
-              <xsl:text>Date d'&#xE9;ch&#xE9;ance</xsl:text>
+              <xsl:text>Date d'échéance</xsl:text>
             </label>
             <input ng-model="vm.data.due_date" placeholder="Entrez une date..." type="date" class="col-md-6 form-control"/>
             <span>
@@ -254,7 +270,7 @@
         <div class="col-md-12">
           <div class="position-relative form-group">
             <label>
-              <xsl:text>Montant de d&#xE9;part : </xsl:text>
+              <xsl:text>Montant de départ : </xsl:text>
             </label>
             <span class="col-md-6">
               <b>{{vm.data.amount_to_pay_in_human}}</b>
@@ -273,7 +289,7 @@
         <div class="col-md-12">
           <div class="position-relative form-group">
             <label>
-              <xsl:text>Montant du deuxi&#xE8;me ordre : </xsl:text>
+              <xsl:text>Montant du deuxième ordre : </xsl:text>
             </label>
             <span class="col-md-6">
               <b>{{vm.data.amount_to_pay - vm.firstAmount | number}}</b>
@@ -291,15 +307,15 @@
     </script>
     <script type="text/ng-template" id="otherBeneficiaryDialog.html">
       <div class="modal-header">
-        <h4 class="modal-title">Choisir un b&#xE9;n&#xE9;ficiaire</h4>
+        <h4 class="modal-title">Choisir un bénéficiaire</h4>
       </div>
       <div class="modal-body">
         <div class="col-md-12">
           <div class="position-relative form-group">
             <label for="third_party_id" class="">
-              <xsl:text>B&#xE9;n&#xE9;ficiaire</xsl:text>
+              <xsl:text>Bénéficiaire</xsl:text>
             </label>
-            <select id="third_party_id" name="third_party_id" data-placeholder="Rechercher b&#xE9;n&#xE9;ficiaire par nom, abr&#xE9;g&#xE9;..." class="form-control form-control-sm" ng-model="vm.beneficiaryId" ng-options="item.id as item.name for item in vm.items">
+            <select id="third_party_id" name="third_party_id" data-placeholder="Rechercher bénéficiaire par nom, abrégé..." class="form-control form-control-sm" ng-model="vm.beneficiaryId" ng-options="item.id as item.name for item in vm.items">
               <option value=""/>
             </select>
           </div>

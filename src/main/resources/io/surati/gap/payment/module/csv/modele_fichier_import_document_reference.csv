@@ -1,0 +1,3 @@
+Date du document;Type de document (INVOICE, EXPENSE_REPORT, PAY_SLIP, WARRANT);N° du document;Autre N° de référence du document;Code du tiers;Abrégé du tiers (Facultatif);Intitulé du tiers;Montant;Objet du document;Lieu d'édition du document;Date de dépôt (Facultatif);Date de saisie (Facultatif)
+11/05/2021;INVOICE;R2333890;SSI-20210409-123-4;YEYHAQDX;SURATI;Surati;1200000;Achat d'ordinateurs;Abidjan;12/05/2021;14/05/2021
+08/05/2021;INVOICE;R2333891;SSI-20210409-126-5;BERN;BERNABE;BERNABE;500000;Achat de DPN;Abidjan;10/05/2021;19/05/2021

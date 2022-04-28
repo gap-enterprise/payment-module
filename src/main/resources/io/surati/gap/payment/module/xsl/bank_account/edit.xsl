@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -38,7 +54,7 @@
                       <xsl:choose>
                         <xsl:when test="$is_new">
                           <li class="active breadcrumb-item" aria-current="page">
-                            <xsl:text>Cr&#xE9;er un compte bancaire</xsl:text>
+                            <xsl:text>Créer un compte bancaire</xsl:text>
                           </li>
                         </xsl:when>
                         <xsl:otherwise>
@@ -66,7 +82,7 @@
                       <xsl:choose>
                         <xsl:when test="$is_new">
                           <li class="active breadcrumb-item" aria-current="page">
-                            <xsl:text>Cr&#xE9;er un compte bancaire</xsl:text>
+                            <xsl:text>Créer un compte bancaire</xsl:text>
                           </li>
                         </xsl:when>
                         <xsl:otherwise>
@@ -126,7 +142,7 @@
               <div class="col-md-3">
                 <div class="position-relative form-group">
                   <label for="branch_code" class="">
-                    <xsl:text>Code guichet (5 caract&#xE8;res)</xsl:text>
+                    <xsl:text>Code guichet (5 caractères)</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
                   <input name="branch_code" id="branch_code" value="{item/branch_code}" placeholder="Entrez un code ..." type="text" class="form-control" minlength="5" maxlength="5" required=""/>
@@ -135,19 +151,19 @@
               <div class="col-md-6">
                 <div class="position-relative form-group">
                   <label for="number" class="">
-                    <xsl:text>Num&#xE9;ro (12 caract&#xE8;res)</xsl:text>
+                    <xsl:text>Numéro (12 caractères)</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
-                  <input name="number" id="number" value="{item/number}" placeholder="Entrez un num&#xE9;ro ..." type="text" class="form-control" minlength="12" maxlength="12" required=""/>
+                  <input name="number" id="number" value="{item/number}" placeholder="Entrez un numéro ..." type="text" class="form-control" minlength="12" maxlength="12" required=""/>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="position-relative form-group">
                   <label for="key" class="">
-                    <xsl:text>Cl&#xE9; (2 caract&#xE8;res)</xsl:text>
+                    <xsl:text>Clé (2 caractères)</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
-                  <input name="key" id="key" value="{item/key}" placeholder="Entrez une cl&#xE9; ..." type="text" class="form-control" minlength="2" maxlength="2" required=""/>
+                  <input name="key" id="key" value="{item/key}" placeholder="Entrez une clé ..." type="text" class="form-control" minlength="2" maxlength="2" required=""/>
                 </div>
               </div>
             </div>
@@ -156,7 +172,7 @@
               <button type="submit" class="btn-shadow btn-wide float-right btn-pill btn-hover-shine btn btn-primary">
                 <xsl:choose>
                   <xsl:when test="$is_new">
-                    <xsl:text>Cr&#xE9;er </xsl:text>
+                    <xsl:text>Créer </xsl:text>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:text>Modifier </xsl:text>

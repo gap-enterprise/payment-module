@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -66,7 +82,7 @@
               <div class="col-md-4">
                 <div class="position-relative form-group">
                   <label for="date" class="font-weight-bold">
-                    <xsl:text>Date d'&#xE9;dition</xsl:text>
+                    <xsl:text>Date d'édition</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
                   <div class="input-group">
@@ -84,12 +100,12 @@
                   <table class="mb-0 table table-hover table-sm">
                     <thead>
                       <tr>
-                        <th>N&#xB0;</th>
-                        <th><xsl:value-of select="mean_type/name"/> N&#xB0;</th>
+                        <th>N°</th>
+                        <th><xsl:value-of select="mean_type/name"/> N°</th>
                         <xsl:if test="not(mean_type/id = 'CHEQUE')">
-                          <th>Date d'&#xE9;ch&#xE9;ance</th>
+                          <th>Date d'échéance</th>
                         </xsl:if>
-                        <th>B&#xE9;n&#xE9;ficiaire</th>
+                        <th>Bénéficiaire</th>
                         <th>Montant</th>
                       </tr>
                     </thead>

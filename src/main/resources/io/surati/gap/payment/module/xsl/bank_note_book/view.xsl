@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sec="http://www.surati.io/Security/User/Profile" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -69,7 +85,7 @@
             </div>
             <div class="col-md-4">
               <h5>
-                <xsl:text>Num&#xE9;ro de d&#xE9;part</xsl:text>
+                <xsl:text>Numéro de départ</xsl:text>
               </h5>
               <p>
                 <xsl:value-of select="item/start_number_view"/>
@@ -77,7 +93,7 @@
             </div>
             <div class="col-md-4">
               <h5>
-                <xsl:text>Num&#xE9;ro de fin</xsl:text>
+                <xsl:text>Numéro de fin</xsl:text>
               </h5>
               <p>
                 <xsl:value-of select="item/end_number_view"/>
@@ -85,7 +101,7 @@
             </div>
             <div class="col-md-4">
               <h5>
-                <xsl:text>Num&#xE9;ro courant</xsl:text>
+                <xsl:text>Numéro courant</xsl:text>
               </h5>
               <p>
                 <xsl:value-of select="item/current_number"/>
@@ -101,7 +117,7 @@
             </div>
             <div class="col-md-4">
               <h5>
-                <xsl:text>Formules tir&#xE9;es</xsl:text>
+                <xsl:text>Formules tirées</xsl:text>
               </h5>
               <p>
                 <xsl:value-of select="item/number_of_leaves_used"/>

@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -31,7 +47,7 @@
                   <xsl:choose>
                     <xsl:when test="$is_new">
                       <li class="active breadcrumb-item" aria-current="page">
-                        <xsl:text>Cr&#xE9;er un carnet de formules</xsl:text>
+                        <xsl:text>Créer un carnet de formules</xsl:text>
                       </li>
                     </xsl:when>
                     <xsl:otherwise>
@@ -111,7 +127,7 @@
               <div class="col-md-4">
                 <div class="position-relative form-group">
                   <label for="prefix_number">
-                    <xsl:text>Pr&#xE9;fixe des num&#xE9;ros</xsl:text>
+                    <xsl:text>Préfixe des numéros</xsl:text>
                   </label>
                   <input name="prefix_number" id="prefix_number" value="{item/prefix_number}" placeholder="Entrez un texte ..." type="text" class="form-control"/>
                 </div>
@@ -119,19 +135,19 @@
               <div class="col-md-4">
                 <div class="position-relative form-group">
                   <label for="start_number">
-                    <xsl:text>Num&#xE9;ro de d&#xE9;part</xsl:text>
+                    <xsl:text>Numéro de départ</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
-                  <input name="start_number" id="start_number" value="{item/start_number}" placeholder="Entrez un num&#xE9;ro ..." type="text" class="form-control" required=""/>
+                  <input name="start_number" id="start_number" value="{item/start_number}" placeholder="Entrez un numéro ..." type="text" class="form-control" required=""/>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="position-relative form-group">
                   <label for="end_number">
-                    <xsl:text>Num&#xE9;ro de fin</xsl:text>
+                    <xsl:text>Numéro de fin</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
-                  <input name="end_number" id="end_number" value="{item/end_number}" placeholder="Entrez un num&#xE9;ro ..." type="text" class="form-control" required=""/>
+                  <input name="end_number" id="end_number" value="{item/end_number}" placeholder="Entrez un numéro ..." type="text" class="form-control" required=""/>
                 </div>
               </div>
             </div>
@@ -140,7 +156,7 @@
               <button type="submit" class="btn-shadow btn-wide float-right btn-pill btn-hover-shine btn btn-primary">
                 <xsl:choose>
                   <xsl:when test="$is_new">
-                    <xsl:text>Cr&#xE9;er </xsl:text>
+                    <xsl:text>Créer </xsl:text>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:text>Modifier </xsl:text>

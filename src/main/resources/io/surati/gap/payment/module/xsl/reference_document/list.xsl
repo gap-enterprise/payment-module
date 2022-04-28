@@ -1,4 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2022 Surati
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to read
+the Software only. Permissions is hereby NOT GRANTED to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sec="http://www.surati.io/Security/User/Profile" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
   <xsl:include href="/io/surati/gap/web/base/xsl/layout.xsl"/>
@@ -43,7 +59,7 @@
         <div class="btn-actions-pane-right">
           <div class="row">
             <xsl:if test="sec:hasAccess(.,'EDITER_DOCUMENT_REF')">
-              <a href="/reference-document/selected?{root_page/full}" class="btn-icon btn-wide btn-outline-2x btn btn-primary btn-sm d-flex mr-1"><xsl:text>Voir ma s&#xE9;lection</xsl:text> ({{vm.amount_selected_in_human}})
+              <a href="/reference-document/selected?{root_page/full}" class="btn-icon btn-wide btn-outline-2x btn btn-primary btn-sm d-flex mr-1"><xsl:text>Voir ma sélection</xsl:text> ({{vm.amount_selected_in_human}})
 	            <span class="pl-2 align-middle opacity-7"><i class="fa fa-eye"/></span>
 	          </a>
               <a href="/reference-document/edit?{root_page/full}" class="btn-icon btn-wide btn-outline-2x btn btn-outline-focus btn-sm d-flex mr-1">
@@ -67,7 +83,7 @@
           <div class="col-sm-12 col-md-3">
             <div class="dataTables_length">
               <label>Afficher 
-	      				<select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm" ng-model="vm.nbItemsPerPage" ng-options="option for option in vm.nbperpageoptions" ng-change="vm.nbItemsPerPageChanged(vm.nbItemsPerPage)"/> &#xE9;l&#xE9;ments
+	      				<select name="example_length" aria-controls="example" class="custom-select custom-select-sm form-control form-control-sm" ng-model="vm.nbItemsPerPage" ng-options="option for option in vm.nbperpageoptions" ng-change="vm.nbItemsPerPageChanged(vm.nbItemsPerPage)"/> éléments
      				</label>
             </div>
           </div>
@@ -76,7 +92,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Contient</span>
               </div>
-              <input type="search" class="form-control form-control-sm" placeholder="N&#xB0; document, B&#xE9;n&#xE9;ficiaire, Objet, Lieu d'&#xE9;dition" aria-controls="example" ng-model="vm.filterContains" ng-model-options="{{ debounce: 1500 }}" ng-change="vm.search()" aria-describedby="search-addon"/>
+              <input type="search" class="form-control form-control-sm" placeholder="N° document, Bénéficiaire, Objet, Lieu d'édition" aria-controls="example" ng-model="vm.filterContains" ng-model-options="{{ debounce: 1500 }}" ng-change="vm.search()" aria-describedby="search-addon"/>
               <div class="input-group-append">
                 <span class="input-group-text" id="search-addon1">
                   <i class="fa fa-search"/>
@@ -91,7 +107,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Ne contient pas</span>
               </div>
-              <input type="search" class="form-control form-control-sm" placeholder="N&#xB0; document, B&#xE9;n&#xE9;ficiaire, Objet, Lieu d'&#xE9;dition" aria-controls="example" ng-model="vm.filterNotContains" ng-model-options="{{ debounce: 1500 }}" ng-change="vm.search()" aria-describedby="search-addon"/>
+              <input type="search" class="form-control form-control-sm" placeholder="N° document, Bénéficiaire, Objet, Lieu d'édition" aria-controls="example" ng-model="vm.filterNotContains" ng-model-options="{{ debounce: 1500 }}" ng-change="vm.search()" aria-describedby="search-addon"/>
               <div class="input-group-append">
                 <span class="input-group-text" id="search-addon2">
                   <i class="fa fa-search"/>
@@ -111,7 +127,7 @@
                 </div>
               </div>
               <div class="col-md-1">
-                <span>&#xE0;</span>
+                <span>à</span>
               </div>
               <div class="input-group input-group-sm">
                 <input type="date" class="form-control" aria-controls="example" ng-model="vm.editenddate" ng-change="vm.search()"/>
@@ -142,7 +158,7 @@
                 <div class="input-group-append">
                   <select class="input-group-text custom-select custom-select-sm" aria-controls="example" ng-model="vm.sorterDirectionId" ng-model-options="{{ debounce: 500 }}" ng-change="vm.search()">
                     <option value="ASC">Croissant</option>
-                    <option value="DESC">D&#xE9;croissant</option>
+                    <option value="DESC">Décroissant</option>
                   </select>
                 </div>
               </div>
@@ -151,19 +167,19 @@
         </div>
         <div class="row mt-2" ng-if="vm.loadingData">
           <div class="col-sm-12 text-center">
-            <h4 class="text-muted">Chargement des donn&#xE9;es... <small>Veuillez patienter</small></h4>
+            <h4 class="text-muted">Chargement des données... <small>Veuillez patienter</small></h4>
             <img src="/io/surati/gap/web/base/img/loader.gif" width="250"/>
           </div>
         </div>
         <div class="mt-2" ng-if="!vm.loadingData">
           <h6 class="text-center pb-1 pt-5" ng-if="vm.items.length == 0">
-            <xsl:text>Il n'y a aucun document de r&#xE9;f&#xE9;rence trouv&#xE9;.</xsl:text>
+            <xsl:text>Il n'y a aucun document de référence trouvé.</xsl:text>
           </h6>
           <div class="row" ng-if="vm.items.length &gt; 0">
             <div class="col-sm-12 col-md-12">
-              <button type="button" class="mb-1 mr-1 btn btn-sm btn-success" ng-click="vm.selectMultiple()" ng-disabled="vm.loadingSelectMultiple"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingSelectMultiple"/><i class="fa fa-plus" ng-if="!vm.loadingSelectMultiple"/> Ajouter &#xE9;l&#xE9;ments s&#xE9;lectionn&#xE9;s
+              <button type="button" class="mb-1 mr-1 btn btn-sm btn-success" ng-click="vm.selectMultiple()" ng-disabled="vm.loadingSelectMultiple"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingSelectMultiple"/><i class="fa fa-plus" ng-if="!vm.loadingSelectMultiple"/> Ajouter éléments sélectionnés
                     </button>
-              <button type="button" class="mb-1 btn btn-sm btn-success" ng-click="vm.selectSelection()" ng-disabled="vm.loadingSelectSelection"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingSelectSelection"/><i class="fa fa-plus" ng-if="!vm.loadingSelectSelection"/> Ajouter les r&#xE9;sultats de la recherche
+              <button type="button" class="mb-1 btn btn-sm btn-success" ng-click="vm.selectSelection()" ng-disabled="vm.loadingSelectSelection"><i class="fa fa-spinner fa-spin" ng-if="vm.loadingSelectSelection"/><i class="fa fa-plus" ng-if="!vm.loadingSelectSelection"/> Ajouter les résultats de la recherche
                     </button>
             </div>
             <div class="col-sm-12 col-md-12">
@@ -174,12 +190,12 @@
                       <th>
                         <input type="checkbox" ng-model="vm.selectAll" ng-change="vm.selectAllChanged(vm.selectAll)"/>
                       </th>
-                      <th>N&#xB0;</th>
+                      <th>N°</th>
                       <th>Date</th>
                       <th>Document</th>
-                      <th>B&#xE9;n&#xE9;ficiaire</th>
+                      <th>Bénéficiaire</th>
                       <th>Montant total</th>
-                      <th>Reste &#xE0; payer</th>
+                      <th>Reste à payer</th>
                       <th>Statut</th>
                       <th>Actions</th>
                     </tr>
@@ -228,7 +244,7 @@
                             <a href="/reference-document/edit?id={{{{item.id}}}}&amp;{root_page/full}" class="mb-1 mr-1 btn btn-xs btn-outline-success">
                               <i class="fa fa-edit"/>
                             </a>
-                            <a href="/reference-document/delete?id={{{{item.id}}}}&amp;{root_page/full}" class="mb-1 mr-1 btn btn-xs btn-outline-danger" onclick="return confirm('Voulez-vous supprimer ce document de r&#xE9;f&#xE9;rence ?');">
+                            <a href="/reference-document/delete?id={{{{item.id}}}}&amp;{root_page/full}" class="mb-1 mr-1 btn btn-xs btn-outline-danger" onclick="return confirm('Voulez-vous supprimer ce document de référence ?');">
                               <i class="fa fa-trash"/>
                             </a>
                           </xsl:if>
@@ -246,10 +262,10 @@
           </div>
           <div class="row mt-3" ng-if="vm.items.length &gt; 0">
             <div class="col-sm-12 col-md-5">
-              <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Affichant de {{vm.firstPosition}} &#xE0; {{vm.lastPosition}} - {{vm.totalCount}} &#xE9;l&#xE9;ments</div>
+              <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Affichant de {{vm.firstPosition}} à {{vm.lastPosition}} - {{vm.totalCount}} éléments</div>
             </div>
             <div class="col-md-7">
-              <ul uib-pagination="" first-text="Premier" last-text="Dernier" previous-text="Pr&#xE9;c&#xE9;dent" next-text="Suivant" total-items="vm.totalCount" ng-model="vm.currentPage" items-per-page="vm.nbItemsPerPage" max-size="vm.pageSize" num-pages="vm.pagesCount" class="pagination-md float-right" rotate="false" boundary-links="true" force-ellipses="true" ng-change="vm.pageChanged()"/>
+              <ul uib-pagination="" first-text="Premier" last-text="Dernier" previous-text="Précédent" next-text="Suivant" total-items="vm.totalCount" ng-model="vm.currentPage" items-per-page="vm.nbItemsPerPage" max-size="vm.pageSize" num-pages="vm.pagesCount" class="pagination-md float-right" rotate="false" boundary-links="true" force-ellipses="true" ng-change="vm.pageChanged()"/>
             </div>
           </div>
         </div>
