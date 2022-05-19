@@ -87,7 +87,7 @@ SOFTWARE.
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.3.3</version>
+      <version>42.3.4</version>
     </dependency>
     <!--
           Use 1.4.x because there is an error on 2.x.x.
@@ -208,7 +208,7 @@ SOFTWARE.
     <dependency>
       <groupId>org.apache.pdfbox</groupId>
       <artifactId>pdfbox</artifactId>
-      <version>2.0.24</version>
+      <version>2.0.26</version>
     </dependency>
   </dependencies>
   <build>
