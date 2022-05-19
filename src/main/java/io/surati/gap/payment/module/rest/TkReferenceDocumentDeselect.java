@@ -42,7 +42,7 @@ public final class TkReferenceDocumentDeselect implements Take {
 		final ReferenceDocumentsToPay documents = workspace.documentsToPay();
 		final ReferenceDocument document = documents.get(id);
 		documents.deselect(document);
-		log.info("Déselection du document de référence (N°=%s) du Tiers (Code=%s)", document.reference(), document.issuer().code());
+		log.info("Déselection du document de référence (N°=%s) du Tiers (Code=%s)", document.reference(), document.beneficiary().code());
 		return new RsForward(
 			new RsFlash(
 				"Le document de référence a été retiré avec succès !",

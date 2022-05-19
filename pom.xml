@@ -193,7 +193,7 @@ SOFTWARE.
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>payment-base</artifactId>
-      <version>0.3.1-alpha.9</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>io.surati.gap</groupId>
@@ -203,7 +203,7 @@ SOFTWARE.
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>payment-base-module</artifactId>
-      <version>0.1.4</version>
+      <version>0.1.5</version>
     </dependency>
     <dependency>
       <groupId>org.apache.pdfbox</groupId>
