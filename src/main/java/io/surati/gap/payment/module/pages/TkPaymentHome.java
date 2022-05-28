@@ -23,7 +23,7 @@ SOFTWARE.
  */
 package io.surati.gap.payment.module.pages;
 
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import io.surati.gap.web.base.xe.XeRootPage;
 import javax.sql.DataSource;
 import org.cactoos.collection.Sticky;

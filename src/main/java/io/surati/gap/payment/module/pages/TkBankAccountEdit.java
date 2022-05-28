@@ -32,7 +32,7 @@ import io.surati.gap.payment.base.db.DbThirdParties;
 import io.surati.gap.payment.base.db.DbThirdPartyBankAccounts;
 import io.surati.gap.payment.module.xe.XeBankAccount;
 import io.surati.gap.payment.module.xe.XeBanks;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import javax.sql.DataSource;
 import org.cactoos.collection.Sticky;
 import org.takes.Request;

@@ -4,7 +4,7 @@ import io.surati.gap.payment.base.api.ReferenceDocument;
 import io.surati.gap.payment.base.api.ReferenceDocumentStatus;
 import io.surati.gap.payment.base.module.xe.XeReferenceDocumentStatuss;
 import io.surati.gap.payment.module.xe.XeFields;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import io.surati.gap.web.base.xe.XeRootPage;
 import java.util.Arrays;
 import javax.sql.DataSource;

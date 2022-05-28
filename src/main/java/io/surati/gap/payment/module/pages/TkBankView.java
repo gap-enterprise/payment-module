@@ -27,7 +27,7 @@ import io.surati.gap.payment.base.api.Bank;
 import io.surati.gap.payment.base.db.DbBanks;
 import io.surati.gap.payment.module.xe.XeBank;
 import io.surati.gap.payment.module.xe.XePaymentMeans;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import javax.sql.DataSource;
 import org.cactoos.collection.Sticky;
 import org.takes.Request;

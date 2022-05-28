@@ -29,7 +29,7 @@ import io.surati.gap.payment.base.api.ThirdParty;
 import io.surati.gap.payment.base.db.DbThirdParties;
 import io.surati.gap.payment.base.module.xe.XeThirdParty;
 import io.surati.gap.payment.module.xe.XePaymentMeanTypes;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import java.util.Collection;
 import java.util.LinkedList;
 import javax.sql.DataSource;
