@@ -30,7 +30,7 @@ import io.surati.gap.payment.base.db.BirtBankNotePreviewPrint;
 import io.surati.gap.payment.base.db.DbBanks;
 import io.surati.gap.payment.base.impl.LettreChangeSample;
 import io.surati.gap.payment.module.xe.XePaymentMean;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import java.io.ByteArrayOutputStream;
 import javax.sql.DataSource;
 import org.apache.commons.codec.binary.Base64;

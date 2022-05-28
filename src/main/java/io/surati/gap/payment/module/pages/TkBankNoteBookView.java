@@ -26,7 +26,7 @@ package io.surati.gap.payment.module.pages;
 import io.surati.gap.payment.base.api.BankNoteBook;
 import io.surati.gap.payment.base.db.DbBankNoteBooks;
 import io.surati.gap.payment.module.xe.XeBankNoteBook;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import javax.sql.DataSource;
 import org.cactoos.collection.Sticky;
 import org.takes.Request;

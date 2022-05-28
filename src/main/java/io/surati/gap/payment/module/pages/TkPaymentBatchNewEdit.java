@@ -40,7 +40,7 @@ import io.surati.gap.payment.base.impl.PaymentBatchesImpl;
 import io.surati.gap.payment.module.xe.XeBankAccount;
 import io.surati.gap.payment.module.xe.XeBankNotes;
 import io.surati.gap.payment.module.xe.XePaymentMeanType;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import io.surati.gap.web.base.rq.RqUser;
 import io.surati.gap.web.base.xe.XeRootPage;
 import java.time.LocalDate;

@@ -30,7 +30,7 @@ import io.surati.gap.payment.base.db.DbCompanyBankAccounts;
 import io.surati.gap.payment.module.xe.XeBankAccounts;
 import io.surati.gap.payment.module.xe.XeBankNoteBook;
 import io.surati.gap.payment.module.xe.XePaymentMeanTypes;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import java.util.Collection;
 import java.util.LinkedList;
 import javax.sql.DataSource;

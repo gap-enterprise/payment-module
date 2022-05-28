@@ -27,7 +27,7 @@ import io.surati.gap.payment.base.api.BankNote;
 import io.surati.gap.payment.base.db.DbBankNotes;
 import io.surati.gap.payment.base.module.xe.XePayment;
 import io.surati.gap.payment.module.xe.XePaymentCancelReasons;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import io.surati.gap.web.base.xe.XeRootPage;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
