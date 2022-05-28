@@ -91,7 +91,7 @@ SOFTWARE.
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.3.4</version>
+      <version>42.3.5</version>
     </dependency>
     <!--
           Use 1.4.x because there is an error on 2.x.x.
@@ -117,7 +117,7 @@ SOFTWARE.
     <dependency>
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-core</artifactId>
-      <version>4.10.0</version>
+      <version>4.11.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
