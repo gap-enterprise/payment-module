@@ -34,7 +34,7 @@ import io.surati.gap.payment.base.db.DbBankNoteBooks;
 import io.surati.gap.payment.base.db.DbWorkspace;
 import io.surati.gap.payment.base.module.xe.XeThirdParty;
 import io.surati.gap.payment.module.xe.XeBankNoteBooks;
-import io.surati.gap.web.base.RsPage;
+import io.surati.gap.payment.module.server.RsPage;
 import io.surati.gap.web.base.rq.RqUser;
 import io.surati.gap.web.base.xe.XeRootPage;
 import java.util.Collection;

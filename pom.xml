@@ -61,6 +61,10 @@ SOFTWARE.
     <developerConnection>scm:git:git://github.com:gap-enterprise/payment-module.git</developerConnection>
     <url>http://github.com/gap-enterprise/payment-module/tree/master</url>
   </scm>
+  <properties>
+    <admin.module.version>0.5.1</admin.module.version>
+    <payment.base.module.version>0.2.0</payment.base.module.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.takes</groupId>
@@ -165,12 +169,12 @@ SOFTWARE.
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>commons-utils</artifactId>
-      <version>0.2</version>
+      <version>0.5.0</version>
     </dependency>
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>web-base</artifactId>
-      <version>0.8.4</version>
+      <version>0.8.5</version>
     </dependency>
     <dependency>
       <groupId>net.sourceforge.saxon</groupId>
@@ -198,17 +202,23 @@ SOFTWARE.
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>admin-module</artifactId>
-      <version>0.4.8</version>
+      <version>${admin.module.version}</version>
     </dependency>
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>payment-base-module</artifactId>
-      <version>0.1.5</version>
+      <version>${payment.base.module.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.pdfbox</groupId>
       <artifactId>pdfbox</artifactId>
       <version>2.0.26</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pf4j</groupId>
+      <artifactId>pf4j</artifactId>
+      <version>3.6.0</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
@@ -226,6 +236,27 @@ SOFTWARE.
           <nonFilteredFileExtensions>
             <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
           </nonFilteredFileExtensions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+            <manifestEntries>
+              <Plugin-Id>payment-module</Plugin-Id>
+              <Plugin-Version>${project.version}</Plugin-Version>
+              <Plugin-Provider>Surati</Plugin-Provider>
+              <Plugin-Class>io.surati.gap.payment.module.PaymentPlugin</Plugin-Class>
+              <Plugin-License>Surati License</Plugin-License>
+              <Plugin-Dependencies>admin-module@${admin.module.version}, payment-base-module@${payment.base.module.version}</Plugin-Dependencies>
+            </manifestEntries>
+          </archive>
         </configuration>
       </plugin>
       <plugin>
