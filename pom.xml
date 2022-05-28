@@ -91,7 +91,7 @@ SOFTWARE.
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.3.5</version>
+      <version>42.3.6</version>
     </dependency>
     <!--
           Use 1.4.x because there is an error on 2.x.x.
