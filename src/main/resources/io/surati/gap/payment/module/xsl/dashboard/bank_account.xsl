@@ -17,7 +17,7 @@ SOFTWARE.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
   <xsl:output method="html" include-content-type="no" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes"/>
-  <xsl:include href="/xsl/dashboard/layout.xsl"/>
+  <xsl:include href="/io/surati/gap/web/base/xsl/dashboard/layout.xsl"/>
   <xsl:template match="page" mode="dashboard">
     <div class="row">
       <div class="col-md-12">

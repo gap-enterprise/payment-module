@@ -1,5 +1,8 @@
 package io.surati.gap.payment.module.server;
 
+import io.surati.gap.payment.module.pages.TkDashboardBankAccount;
+import io.surati.gap.payment.module.pages.TkDashboardBankNoteBook;
+import io.surati.gap.payment.module.pages.TkDashboardPayment;
 import io.surati.gap.payment.module.pages.TkPaymentExportList;
 import io.surati.gap.payment.module.actions.TkPaymentNewBookChoose;
 import io.surati.gap.payment.module.pages.TkBankAccountAccountingSettingEdit;
@@ -47,6 +50,27 @@ public final class FkPages extends FkWrap {
 	public FkPages(final DataSource source) {
 		super(
 			new FkChain(
+				new FkRegex(
+					"/dashboard/payment",
+					new TkSecure(
+						new TkDashboardPayment(source),
+						source
+					)
+				),
+				new FkRegex(
+					"/dashboard/bank-account",
+					new TkSecure(
+						new TkDashboardBankAccount(source),
+						source
+					)
+				),
+				new FkRegex(
+					"/dashboard/bank-note-book",
+					new TkSecure(
+						new TkDashboardBankNoteBook(source),
+						source
+					)
+				),
 				new FkRegex(
 					"/payment/home",
 					new TkSecure(
