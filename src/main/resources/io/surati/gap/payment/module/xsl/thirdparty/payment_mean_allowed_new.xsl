@@ -28,10 +28,12 @@
                     <a href="/third-party">Tiers</a>
                   </li>
                   <li class="breadcrumb-item">
-                    <a href="/third-party/view?id={tp/id}"><xsl:value-of select="tp/name"/></a>
+                    <a href="/third-party/view?id={tp/id}">
+                      <xsl:value-of select="tp/name"/>
+                    </a>
                   </li>
                   <li class="active breadcrumb-item" aria-current="page">
-                     <xsl:text>Autoriser un moyen de paiement</xsl:text>
+                    <xsl:text>Autoriser un moyen de paiement</xsl:text>
                   </li>
                 </ol>
               </nav>
@@ -50,15 +52,17 @@
               <div class="col-md-6">
                 <div class="position-relative form-group">
                   <label for="mean_type_id" class="">
-                    <xsl:text>Moyen de paiement à autoriser</xsl:text>
+                    <xsl:text>Moyen de paiement &#xE0; autoriser</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
                   <select id="mean_type_id" name="mean_type_id" class="form-control" required="">
-			          <option value="">-- SVP choisir un moyen de paiement --</option>
-			          <xsl:for-each select="payment_mean_types/payment_mean_type">
-			          	<option value="{id}"><xsl:value-of select="name"/></option>
-			          </xsl:for-each>
-			      </select>
+                    <option value="">-- SVP choisir un moyen de paiement --</option>
+                    <xsl:for-each select="payment_mean_types/payment_mean_type">
+                      <option value="{id}">
+                        <xsl:value-of select="name"/>
+                      </option>
+                    </xsl:for-each>
+                  </select>
                   <input type="hidden" name="tp_id" value="{tp/id}"/>
                 </div>
               </div>
@@ -79,5 +83,5 @@
       </div>
     </div>
   </xsl:template>
-  <xsl:template match="page" mode="custom-script"></xsl:template>
+  <xsl:template match="page" mode="custom-script"/>
 </xsl:stylesheet>
