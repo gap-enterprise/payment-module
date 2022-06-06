@@ -155,7 +155,7 @@ SOFTWARE.
     <dependency>
       <groupId>com.baudoliver7</groupId>
       <artifactId>takes-utils</artifactId>
-      <version>0.3.1</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>javax.json</groupId>
