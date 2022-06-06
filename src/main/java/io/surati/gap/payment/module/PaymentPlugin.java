@@ -3,12 +3,9 @@ package io.surati.gap.payment.module;
 import io.surati.gap.commons.utils.pf4j.DatabaseSetup;
 import io.surati.gap.commons.utils.pf4j.ModuleRegistration;
 import io.surati.gap.commons.utils.pf4j.WebFront;
-import io.surati.gap.payment.base.db.PaymentBaseDemoDatabase;
-import io.surati.gap.payment.base.db.PaymentBaseProdDatabase;
-import io.surati.gap.payment.base.module.PaymentBaseModule;
-import io.surati.gap.payment.base.module.server.FkActions;
-import io.surati.gap.payment.base.module.server.FkApi;
-import io.surati.gap.payment.base.module.server.FkPages;
+import io.surati.gap.payment.module.server.FkActions;
+import io.surati.gap.payment.module.server.FkApi;
+import io.surati.gap.payment.module.server.FkPages;
 import javax.sql.DataSource;
 import org.pf4j.Extension;
 import org.pf4j.Plugin;
@@ -43,7 +40,7 @@ public final class PaymentPlugin extends Plugin {
 
         @Override
         public void register() {
-            PaymentBaseModule.setup();
+            PaymentModule.setup();
         }
     }
 
@@ -52,11 +49,7 @@ public final class PaymentPlugin extends Plugin {
 
         @Override
         public void migrate(final DataSource src, final boolean demo) {
-            if (demo) {
-                new PaymentBaseDemoDatabase(src);
-            } else {
-                new PaymentBaseProdDatabase(src);
-            }
+            // nothing to do
         }
     }
 
