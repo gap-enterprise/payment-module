@@ -61,10 +61,6 @@ SOFTWARE.
     <developerConnection>scm:git:git://github.com:gap-enterprise/payment-module.git</developerConnection>
     <url>http://github.com/gap-enterprise/payment-module/tree/master</url>
   </scm>
-  <properties>
-    <admin.module.version>0.5.1</admin.module.version>
-    <payment.base.module.version>0.2.0</payment.base.module.version>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>org.takes</groupId>
@@ -202,12 +198,12 @@ SOFTWARE.
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>admin-module</artifactId>
-      <version>${admin.module.version}</version>
+      <version>0.5.1</version>
     </dependency>
     <dependency>
       <groupId>io.surati.gap</groupId>
       <artifactId>payment-base-module</artifactId>
-      <version>${payment.base.module.version}</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.pdfbox</groupId>
@@ -254,7 +250,7 @@ SOFTWARE.
               <Plugin-Provider>Surati</Plugin-Provider>
               <Plugin-Class>io.surati.gap.payment.module.PaymentPlugin</Plugin-Class>
               <Plugin-License>Surati License</Plugin-License>
-              <Plugin-Dependencies>admin-module@${admin.module.version}, payment-base-module@${payment.base.module.version}</Plugin-Dependencies>
+              <Plugin-Dependencies>admin-module, payment-base-module</Plugin-Dependencies>
             </manifestEntries>
           </archive>
         </configuration>
