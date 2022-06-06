@@ -24,7 +24,7 @@ SOFTWARE.
   </parent>
   <groupId>io.surati.gap</groupId>
   <artifactId>payment-module</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.2.4</version>
   <description>Payment module</description>
   <url>https://github.com/gap-enterprise/payment-module</url>
   <inceptionYear>2022</inceptionYear>
