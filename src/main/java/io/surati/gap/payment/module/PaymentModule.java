@@ -36,10 +36,8 @@ public enum PaymentModule implements Module {
 	);
 
 	public static void setup() {
-		for (final Module mod : PaymentModule.values()) {
-			Module.VALUES.add(mod);
-			Module.BY_CODE.put(mod.code(), mod);
-		}
+		Module.VALUES.add(PaymentModule.PAYMENT);
+		Module.BY_CODE.put(PaymentModule.PAYMENT.code(), PaymentModule.PAYMENT);
 		for (final DashboardMenu dmenu : PaymentDashboardMenu.values()) {
 			DashboardMenu.VALUES.add(dmenu);
 		}
