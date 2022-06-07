@@ -68,7 +68,7 @@ SOFTWARE.
               <div class="col-md-6">
                 <div class="position-relative form-group">
                   <label for="mean_type_id" class="">
-                    <xsl:text>Moyen de paiement &#xE0; autoriser</xsl:text>
+                    <xsl:text>Moyen de paiement à autoriser</xsl:text>
                     <span style="color: red"> *</span>
                   </label>
                   <select id="mean_type_id" name="mean_type_id" class="form-control" required="">
